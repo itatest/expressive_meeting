@@ -7,8 +7,37 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="container">
-    <%= yield %>
-  </div>
+	<div class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand">Expression Meeting</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<% if logged_in? %>
+				<li><a>XXX</a></li>
+				<li><a>YYY</a></li>
+				<% end %>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<% if logged_in? %>
+				<li>
+					<%= button_to "Sign out", signout_path, method: :delete, class: 'btn btn-default btn-mini navbar-btn'  %>
+				</li>
+				<% end %>
+			</ul>
+		</div>
+	</div>
+
+		<div class="container">
+		  <%= bootswatch_flash %>
+		  <%= yield %>
+		</div>
+		<!-- /container -->
+		
+		<footer>
+			<p>
+				&copy; 2015 OGIS-RI Co.,Ltd.
+			</p>
+		</footer>
 </body>
 </html>

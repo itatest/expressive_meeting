@@ -13,20 +13,14 @@ class SessionsController < ApplicationController
   end
 
   def create
-    if login(params[:signin][:login_key], params[:signin][:password], params[:signin][:remember_me])
+    if login(params[:signin][:email], params[:signin][:password], params[:signin][:remember_me])
       params[:signin].delete(:password)
-      AuditLog.create_audit_log(@current_user, params, request)
       flash[:notice] = "Signed in successfully."
-      if @current_user.org_id
-        redirect_to root_url
-      else
-        redirect_to orgs_path
-      end
+      redirect_to root_url
     else
       params[:signin].delete(:password)
-      createAuditLogForLoginFailed
       flash[:error] = "Authorization failed."
-      @login_key = params[:signin][:login_key]
+      @login_key = params[:signin][:email]
       render action: :new
     end
   end

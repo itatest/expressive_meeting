@@ -6,10 +6,10 @@
 		<div class="panel-body">
 			<%= form_tag(signin_path, method: :post, id: "signin", role: "form") do %>
 			<div class="form-group">
-				<label class="control-label" for="login_key">
+				<label class="control-label" for="email">
 					Your Email Address
 				</label>
-				<%= text_field_tag "signin[email]", @login_key, class: "form-control", id: "login_key" %>
+				<%= text_field_tag "signin[email]", @login_key, class: "form-control", id: "email" %>
 			</div>
 			<div class="form-group">
 				<label class="control-label" for="user_password">Password</label>

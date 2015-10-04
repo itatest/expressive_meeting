@@ -54,6 +54,9 @@ gem 'cancancan'
 # ユーザ認証のライブラリ
 gem 'sorcery'
 
+# emailのバリデーション
+gem 'validates_email_format_of'
+
 ### デザイン関係
 # less(CSS)対応
 gem 'less-rails'
@@ -65,3 +68,6 @@ gem 'bootstrap-sass'
 
 # bootswatchのテーマを使用できるようにする
 gem 'bootswatch-rails'
+
+# Bootstrap上に警告を表示するヘルパー
+gem 'twitter-bootswatch-rails-helpers', '~> 3.2.0.0'
