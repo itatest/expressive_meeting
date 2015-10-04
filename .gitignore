@@ -18,3 +18,4 @@
 
 # Ignore eclipse file
 .project
+/vendor

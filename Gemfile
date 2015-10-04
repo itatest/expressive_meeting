@@ -12,7 +12,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -27,7 +27,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -45,3 +45,23 @@ group :development do
   gem 'spring'
 end
 
+# Mysqlのコネクタ バージョンは最新版を使用するとRailsでエラーとなるため0.3.X系で現在は固定
+gem 'mysql2', '~> 0.3.20'
+
+# サイト全体の認証に使用するライブラリ
+gem 'cancancan'
+
+# ユーザ認証のライブラリ
+gem 'sorcery'
+
+### デザイン関係
+# less(CSS)対応
+gem 'less-rails'
+# CSSのブラウザ互換をいい感じにしてくれるライブラリ
+gem 'autoprefixer-rails'
+
+# bootstrapでsassを使用する
+gem 'bootstrap-sass'
+
+# bootswatchのテーマを使用できるようにする
+gem 'bootswatch-rails'
