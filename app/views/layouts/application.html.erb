@@ -14,7 +14,9 @@
 			</div>
 			<ul class="nav navbar-nav">
 				<% if logged_in? %>
-				<li><a>XXX</a></li>
+				<li>
+					<%= link_to "Meetings", meetings_path %>
+				</li>
 				<li><a>YYY</a></li>
 				<% end %>
 			</ul>
@@ -31,13 +33,13 @@
 		<div class="container">
 		  <%= bootswatch_flash %>
 		  <%= yield %>
+		  
+		  <footer>
+				<p>
+					&copy; 2015 Ogis-ri ITA Member.
+				</p>
+			</footer>
 		</div>
 		<!-- /container -->
-		
-		<footer>
-			<p>
-				&copy; 2015 OGIS-RI Co.,Ltd.
-			</p>
-		</footer>
 </body>
 </html>

@@ -71,3 +71,6 @@ gem 'bootswatch-rails'
 
 # Bootstrap上に警告を表示するヘルパー
 gem 'twitter-bootswatch-rails-helpers', '~> 3.2.0.0'
+
+# Bootstrap用のフォーム作成
+gem 'bootstrap_form', '~> 2.2.0' 

@@ -11,7 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150928094549) do
+ActiveRecord::Schema.define(version: 20151007170600) do
+
+  create_table "conversations", force: :cascade do |t|
+    t.integer  "meeting_id",    limit: 4
+    t.text     "message",       limit: 65535
+    t.integer  "user_id",       limit: 4
+    t.integer  "expression_id", limit: 4
+    t.integer  "datetime",      limit: 4
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "meetings", force: :cascade do |t|
+    t.string   "name",           limit: 255
+    t.string   "description",    limit: 255
+    t.integer  "status",         limit: 4
+    t.integer  "master_user_id", limit: 4
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "meetings", ["master_user_id"], name: "index_meetings_on_master_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                        limit: 255, null: false
