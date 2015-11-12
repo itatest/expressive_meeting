@@ -8,4 +8,9 @@ Rails.application.routes.draw do
   resources :users
   resources :meetings
   
+  namespace :api, defaults: {format: 'json'}  do
+    namespace :v1 do
+      resources :conversations
+    end
+  end
 end

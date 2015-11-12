@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/ifad/data-confirm-modal.git
+  revision: fd8b056516558a9c7d540fca024bb1e73eb3cfe2
+  specs:
+    data-confirm-modal (1.1.0)
+      railties (>= 3.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -138,6 +145,8 @@ GEM
     rdoc (4.2.0)
       json (~> 1.4)
     ref (2.0.0)
+    responders (2.1.0)
+      railties (>= 4.2.0, < 5)
     sass (3.4.18)
     sass-rails (5.0.4)
       railties (>= 4.0.0, < 5.0)
@@ -202,11 +211,13 @@ DEPENDENCIES
   byebug
   cancancan
   coffee-rails (~> 4.1.0)
+  data-confirm-modal!
   jbuilder (~> 2.0)
   jquery-rails
   less-rails
   mysql2 (~> 0.3.20)
   rails (= 4.2.4)
+  responders (~> 2.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   sorcery

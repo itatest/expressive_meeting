@@ -74,3 +74,6 @@ gem 'twitter-bootswatch-rails-helpers', '~> 3.2.0.0'
 
 # Bootstrap用のフォーム作成
 gem 'bootstrap_form', '~> 2.2.0' 
+
+gem 'data-confirm-modal', github: 'ifad/data-confirm-modal'
+gem 'responders', '~> 2.0'
