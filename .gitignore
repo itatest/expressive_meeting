@@ -20,4 +20,3 @@
 .project
 /vendor
 
-db/migrate/*
